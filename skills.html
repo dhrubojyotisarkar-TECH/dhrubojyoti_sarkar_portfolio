@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>skills</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <button onclick="window.location.href= 'index.html'" type="button" class="btn 1">Home</button>
+    <button onclick="window.location.href= 'about.html'" type="button" class="btn 2" > About Me</button>
+    <button onclick="window.location.href= 'education.html'" type="button" class="btn 3">Education</button>
+    <button onclick="window.location.href= 'experience.html'" type="button" class="btn 4">Experience</button>
+    <button type="button" class="btn 5">Skills</button>
+    <button onclick="window.location.href= 'projects.html'" type="button" class="btn 6">Projects</button>
+
+    <button id="openPopup" type="button" class="btn_8">Contacts</button>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h3>Contacts Information</h3>
+            <p>Click the number to make a phone call : +91 <a href="tel: +917407315951">7407315951</a></p>
+            <p>Click the email id to send an email : <a
+                    href="mailto:sarkardhrubojyoti545@gmail.com">sarkardhrubojyoti545@gmail.com</a></p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+    <script>
+        const openPopupButton = document.getElementById("openPopup");
+        const closePopupButton = document.getElementById("closePopup");
+        const popup = document.getElementById("popup");
+        const nameInput = document.getElementById("name");
+
+        openPopupButton.addEventListener("click", function () {
+            popup.style.display = "flex";
+            nameInput.focus(); // Set focus on the name input field
+        });
+
+        closePopupButton.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+
+        // Close the popup when clicking outside of it
+        window.addEventListener("click", function (event) {
+            if (event.target === popup) {
+                popup.style.display = "none";
+            }
+        });
+
+    </script>
+
+    <div class="dropdown">
+        <button type="button" class="btn_9">Socal Media Link</button>
+        <div class="dropdown-content">
+            <a href="https://www.linkedin.com/in/dhrubojyoti-sarkar-465989200">LINKEDIN</a>
+            <a href="https://github.com/dhrubojyotisarkar-TECH">GITHUB</a>
+            <a href="https://www.hackerrank.com/sarkardhrubojyo1">HACKERRANK</a>
+        </div>
+    </div>
+ 
+    <div class="heading_2">
+        <h2>Skills</h2>
+    </div>
+    <hr>
+    <div class="horizontal1">
+        <h3>Full Stack Java</h3>
+        <h4>
+            Java - Core Java, Collection Framework
+            <br><br>
+            Advance Java (J2SE / J2EE)
+            <br><br>
+            JDBC , Servlet & JSP
+            <br><br>
+            Spring Framework
+            <br><br>
+            Spring MVC - Spring Boot
+            <br><br>
+            Hibernate - JPA
+            <br><br>
+            RESTful WebServices
+            <br>
+
+        </h4>
+    </div>
+
+    <div class="horizontal2">
+        <h3>Core Comp</h3>
+        <h4>
+            Object Oriented Programming.
+            <br><br>
+             Data Sctructure & Algorithm
+            <br><br>
+            Problem Solving and Analytical
+            <br><br>
+            C Programming Language.
+            <br><br>
+            Software Development Life Cycle
+            <br><br>
+            Manual Testing.
+            <br><br>
+            Linux OS
+        </h4>
+    </div>
+
+    <div class="horizontal2">
+        <h3>Web development</h3>
+        <h4>
+            HTML <br><br> Css <br><br> JavaScript
+            <br>
+        </h4>
+        <h3>Database</h3>
+        <h4>MySQL<br><br>
+        Oracle SQL Developer
+        <br><br>
+    </h4>
+    </div>
+    
+</body>
+</html>

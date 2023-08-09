@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>aboutMe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <button onclick="window.location.href= 'index.html'" type="button" class="btn 1">Home</button>
+    <button type="button" class="btn 2" > About Me</button>
+    <button onclick="window.location.href= 'education.html'" type="button" class="btn 3">Education</button>
+    <button onclick="window.location.href= 'experience.html'" type="button" class="btn 4">Experience</button>
+    <button onclick="window.location.href= 'skills.html'" type="button" class="btn 5">Skills</button>
+    <button onclick="window.location.href= 'projects.html'" type="button" class="btn 6">Projects</button>
+    
+    <button id="openPopup" type="button" class="btn_8">Contacts</button>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h3>Contacts Information</h3>
+            <p>Click the number to make a phone call : +91 <a href="tel: +917407315951">7407315951</a></p>
+            <p>Click the email id to send an email : <a
+                    href="mailto:sarkardhrubojyoti545@gmail.com">sarkardhrubojyoti545@gmail.com</a></p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+    <script>
+        const openPopupButton = document.getElementById("openPopup");
+        const closePopupButton = document.getElementById("closePopup");
+        const popup = document.getElementById("popup");
+        const nameInput = document.getElementById("name");
+
+        openPopupButton.addEventListener("click", function () {
+            popup.style.display = "flex";
+            nameInput.focus(); // Set focus on the name input field
+        });
+
+        closePopupButton.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+
+        // Close the popup when clicking outside of it
+        window.addEventListener("click", function (event) {
+            if (event.target === popup) {
+                popup.style.display = "none";
+            }
+        });
+
+    </script>
+
+    <div class="dropdown">
+        <button type="button" class="btn_9">Socal Media Link</button>
+        <div class="dropdown-content">
+            <a href="https://www.linkedin.com/in/dhrubojyoti-sarkar-465989200">LINKEDIN</a>
+            <a href="https://github.com/dhrubojyotisarkar-TECH">GITHUB</a>
+            <a href="https://www.hackerrank.com/sarkardhrubojyo1">HACKERRANK</a>
+        </div>
+    </div>
+ 
+    <div class="heading_2">
+        <h2>About Me</h2>
+    </div>
+    <hr>
+
+    <div class="about">
+    <h3>
+        Diehard fan of learning,
+        <br>
+        Being motivated to learn and smart work.....
+    </h3>
+    <br>
+    <h4>
+        A dynamic Computer Science Engineer with 9 months of industry experience and a fulltime Bachelor Degree in Computer Science & Engineering
+        from a renowned university.
+        Seeking challenging and rewarding opportunities in Software Development / Java Full Stack Development / Web Development with an organization
+         of high repute preferbly in IT Services & Cousulting / Product Software industry in Kolkata / Bengaluru / Pune.
+    </h4>
+</div>
+
+</body>
+
+</html>

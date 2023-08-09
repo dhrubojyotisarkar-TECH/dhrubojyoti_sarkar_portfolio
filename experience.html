@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button onclick="window.location.href= 'index.html'" type="button" class="btn 1">Home</button>
+    <button onclick="window.location.href= 'about.html'" type="button" class="btn 2"> About Me</button>
+    <button onclick="window.location.href= 'education.html'" type="button" class="btn 3">Education</button>
+    <button onclick="window.location.href= 'experience.html'" type="button" class="btn 4">Experience</button>
+    <button onclick="window.location.href= 'skills.html'" type="button" class="btn 5">Skills</button>
+    <button onclick="window.location.href= 'projects.html'" type="button" class="btn 6">Projects</button>
+
+    <button id="openPopup" type="button" class="btn_8">Contacts</button>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h3>Contacts Information</h3>
+            <p>Click the number to make a phone call : +91 <a href="tel: +917407315951">7407315951</a></p>
+            <p>Click the email id to send an email : <a
+                    href="mailto:sarkardhrubojyoti545@gmail.com">sarkardhrubojyoti545@gmail.com</a></p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+    <script>
+        const openPopupButton = document.getElementById("openPopup");
+        const closePopupButton = document.getElementById("closePopup");
+        const popup = document.getElementById("popup");
+        const nameInput = document.getElementById("name");
+
+        openPopupButton.addEventListener("click", function () {
+            popup.style.display = "flex";
+            nameInput.focus(); // Set focus on the name input field
+        });
+
+        closePopupButton.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+
+        // Close the popup when clicking outside of it
+        window.addEventListener("click", function (event) {
+            if (event.target === popup) {
+                popup.style.display = "none";
+            }
+        });
+
+    </script>
+
+    <div class="dropdown">
+        <button type="button" class="btn_9">Socal Media Link</button>
+        <div class="dropdown-content">
+            <a href="https://www.linkedin.com/in/dhrubojyoti-sarkar-465989200">LINKEDIN</a>
+            <a href="https://github.com/dhrubojyotisarkar-TECH">GITHUB</a>
+            <a href="https://www.hackerrank.com/sarkardhrubojyo1">HACKERRANK</a>
+        </div>
+    </div>
+
+    <div class="heading_2">
+        <h2>Experience</h2>
+    </div>
+    <hr>
+    <div class="experience">
+        <h3>
+            Graduate Engineer Trainee,
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            July' 2022 - March' 2023
+            <br>
+            Sterlite Technologies Limited (STL Digital), Kolkata
+        </h3>
+        <h4>
+             Interfacing with clients for gathering business needs<br>
+             Conducting system analysis; finalizing technical / functional specifications, low level design documents,
+            use cases, design documents and build scripts<br>
+             Contributing to design, development, testing, troubleshooting and debugging of software<br>
+             Identifying, analysing defects & in-consistencies in software program<br>
+             Ensuring smooth implementation and testing at client location<br>
+             Providing post-implementation, application maintenance and enhancement support to the client<br>
+             Engaging in deploying product updates as required while implementing integrations as and when they arise<br>
+             Developing tools to reduce occurrences of errors and improving customer<br>
+             Coordinating with the Project Management teams to monitor progress and implement the initiatives<br>
+             Working in Support and Development Team<br>
+             Worked as a Java Developer in Telco Products<br>
+             Familiar with usages of popular tools like JIRA, POSTMAN, GIT, MobaXterm, IDEs etc.<br>
+        </h4>
+
+    </div>
+
+
+</body>
+
+</html>
