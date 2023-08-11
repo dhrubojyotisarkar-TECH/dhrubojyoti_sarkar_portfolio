@@ -4,59 +4,109 @@
 <head>
     <title>education</title>
     <link rel="stylesheet" href="style.css">
+    <script
+    src="https://kit.fontawesome.com/aaf9f1f44b.js"
+    crossorigin="anonymous"
+></script>
 </head>
 
 <body>
-    
-    <button onclick="window.location.href= 'index.html'" type="button" class="btn 1">Home</button>
-    <button onclick="window.location.href= 'about.html'" type="button" class="btn 2" > About Me</button>
-    <button type="button" class="btn 3">Education</button>
-    <button onclick="window.location.href= 'experience.html'" type="button" class="btn 4">Experience</button>
-    <button onclick="window.location.href= 'skills.html'" type="button" class="btn 5">Skills</button>
-    <button onclick="window.location.href= 'projects.html'" type="button" class="btn 6">Projects</button>
+<nav>
+    <div class="left-nav">
+        <button onclick="window.location.href= 'index.html'" type="button" class="btn1">Home</button>
+        <button
+            onclick="window.location.href= 'about.html'"
+            type="button"
+            class="btn2"
+        >
+            About Me
+        </button>
+        <button
+            onclick="window.location.href= 'education.html'"
+            type="button"
+            class="btn3"
+        >
+            Education
+        </button>
+        <button
+            onclick="window.location.href= 'experience.html'"
+            type="button"
+            class="btn4"
+        >
+            Experience
+        </button>
+        <button
+            onclick="window.location.href= 'skills.html'"
+            type="button"
+            class="btn5"
+        >
+            Skills
+        </button>
+        <button
+            onclick="window.location.href= 'projects.html'"
+            type="button"
+            class="btn6"
+        >
+            Projects
+        </button>
+    </div>
+    <div class="right-nav">
+        <button id="openPopup" type="button" class="btn_8">Contacts</button>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h3>Contacts Information</h3>
+                <p>
+                    Click the number to make a phone call : +91
+                    <a href="tel: +917407315951">7407315951</a>
+                </p>
+                <p>
+                    Click the email id to send an email :
+                    <a href="mailto:sarkardhrubojyoti545@gmail.com"
+                        >sarkardhrubojyoti545@gmail.com</a
+                    >
+                </p>
+                <button id="closePopup">Close</button>
+            </div>
+        </div>
+                <script>
+    const openPopupButton = document.getElementById('openPopup');
+    const closePopupButton = document.getElementById('closePopup');
+    const popup = document.getElementById('popup');
+    const nameInput = document.getElementById('name');
 
-    <button id="openPopup" type="button" class="btn_8">Contacts</button>
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <h3>Contacts Information</h3>
-            <p>Click the number to make a phone call : +91 <a href="tel: +917407315951">7407315951</a></p>
-            <p>Click the email id to send an email : <a
-                    href="mailto:sarkardhrubojyoti545@gmail.com">sarkardhrubojyoti545@gmail.com</a></p>
-            <button id="closePopup">Close</button>
+    openPopupButton.addEventListener('click', function () {
+        popup.style.display = 'flex';
+        nameInput.focus(); // Set focus on the name input field
+    });
+
+    closePopupButton.addEventListener('click', function () {
+        popup.style.display = 'none';
+    });
+
+    // Close the popup when clicking outside of it
+    window.addEventListener('click', function (event) {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+</script>
+
+        <div class="dropdown">
+            <button type="button" class="btn_9">Socal Media Link</button>
+            <div class="dropdown-content">
+                <a href="https://www.linkedin.com/in/dhrubojyoti-sarkar-465989200"
+                    ><i class="fa-brands fa-linkedin fa-lg"></i> &nbsp;LinkedIn</a
+                >
+                <a href="https://github.com/dhrubojyotisarkar-TECH"
+                    ><i class="fa-brands fa-github fa-lg"></i> &nbsp;GitHub</a
+                >
+                <a href="https://www.hackerrank.com/sarkardhrubojyo1"
+                    ><i class="fa-brands fa-hackerrank fa-lg"></i> &nbsp;HackerRank</a
+                >
+            </div>
         </div>
     </div>
-    <script>
-        const openPopupButton = document.getElementById("openPopup");
-        const closePopupButton = document.getElementById("closePopup");
-        const popup = document.getElementById("popup");
-        const nameInput = document.getElementById("name");
-
-        openPopupButton.addEventListener("click", function () {
-            popup.style.display = "flex";
-            nameInput.focus(); // Set focus on the name input field
-        });
-
-        closePopupButton.addEventListener("click", function () {
-            popup.style.display = "none";
-        });
-
-        // Close the popup when clicking outside of it
-        window.addEventListener("click", function (event) {
-            if (event.target === popup) {
-                popup.style.display = "none";
-            }
-        });
-
-    </script>
-
-    <div class="dropdown">
-        <button type="button" class="btn_9">Socal Media Link</button>
-        <div class="dropdown-content">
-            <a href="https://www.linkedin.com/in/dhrubojyoti-sarkar-465989200">LINKEDIN</a>
-            <a href="https://github.com/dhrubojyotisarkar-TECH">GITHUB</a>
-            <a href="https://www.hackerrank.com/sarkardhrubojyo1">HACKERRANK</a>
-        </div>
-    </div>
+</nav>
  
     <div class="heading_2">
         <h2>Education</h2>
@@ -69,6 +119,7 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       07/2018 - 06/2022
     </h3>
     
@@ -88,7 +139,9 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         2018
       </h3>
       
@@ -108,8 +161,10 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         2016
       </h3>
       
